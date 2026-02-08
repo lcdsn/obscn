@@ -7,7 +7,7 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    > .section-top__button:first-child {
+    > .section-top__button {
       display: none;
 
       @include screen-600 {

@@ -30,11 +30,7 @@
   gap: rem(8);
 
   > .button-square {
-    display: none;
-
-    @include screen-1200 {
-      display: inline-flex;
-    }
+    display: inline-flex;
   }
 }
 

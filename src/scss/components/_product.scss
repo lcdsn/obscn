@@ -6,6 +6,14 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+
+    > .section-top__button:first-child {
+      display: none;
+
+      @include screen-600 {
+        display: inline-block;
+      }
+    }
   }
 
   &__container {

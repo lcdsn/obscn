@@ -1,0 +1,8 @@
+@use '../partials/utils' as *;
+
+.price {
+  font-family: $font-mono;
+  font-size: rem(18);
+  font-weight: 700;
+  line-height: 1.25;
+}

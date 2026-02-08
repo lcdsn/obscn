@@ -1,0 +1,66 @@
+@use '../partials/utils' as *;
+
+.size {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  min-width: rem(30);
+  height: rem(30);
+  border: $border-width-2x solid $black;
+  padding: rem(1) rem(6);
+  font-family: $font-mono;
+  font-size: rem(13);
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: background-color $trans-sm;
+  }
+
+  &::before {
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    height: $border-width-2x;
+  }
+
+  &::after {
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    margin-left: -1px;
+    width: $border-width-2x;
+  }
+
+  &:hover:not(.size_disabled) {
+    &::before,
+    &::after {
+      background-color: $black;
+    }
+  }
+
+  &_active {
+    &::before,
+    &::after {
+      background-color: $black;
+    }
+  }
+
+  &_disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
+}
+
+.sizes {
+  display: flex;
+  gap: rem(4);
+  flex-wrap: wrap;
+}

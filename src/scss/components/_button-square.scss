@@ -1,0 +1,42 @@
+@use '../partials/utils' as *;
+
+.button-square {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(8);
+  padding: rem(6) rem(10);
+  border: $border-width-2x solid $black;
+  background-color: transparent;
+  color: $black;
+  font-family: $font-mono;
+  font-size: 0;
+  text-decoration: none;
+  position: relative;
+  transition: background-color $trans-sm, color $trans-sm;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+
+    .button-square__icon {
+      stroke: $white;
+    }
+  }
+
+  &__price,
+  &__number {
+    font-size: rem(14);
+    font-weight: 700;
+  }
+
+  &__price {
+    padding-right: rem(8);
+    border-right: $border-width-2x solid currentColor;
+  }
+
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    transition: stroke $trans-sm;
+  }
+}

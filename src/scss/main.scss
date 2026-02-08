@@ -1,0 +1,28 @@
+@use './partials/vars' as *;
+@use './partials/mixins' as *;
+@use './partials/normalize';
+@use './partials/common';
+
+@use './components/logo';
+@use './components/header';
+@use './components/footer';
+@use './components/nav';
+@use './components/button';
+@use './components/button-square';
+@use './components/button-tag';
+@use './components/button-nav';
+@use './components/button-counter';
+@use './components/button-close';
+@use './components/title';
+@use './components/price';
+@use './components/color';
+@use './components/size';
+@use './components/add';
+@use './components/select';
+@use './components/sidebar';
+@use './components/catalog';
+@use './components/catalog-item';
+@use './components/product';
+@use './components/picture';
+@use './components/cart';
+@use './components/not-found';

@@ -1,0 +1,23 @@
+@use '../partials/utils' as *;
+
+.catalog {
+  &__section-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include screen-600 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include screen-1200 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

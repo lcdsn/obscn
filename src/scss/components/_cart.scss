@@ -1,0 +1,145 @@
+@use '../partials/utils' as *;
+
+.cart {
+  &__section-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(64) rem(16);
+    gap: rem(24);
+  }
+
+  &__empty-text {
+    font-family: $font-mono;
+    font-size: rem(18);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(16);
+    border-bottom: $border-width-2x solid $black;
+    background-color: $black;
+    color: $white;
+  }
+
+  &__total-label {
+    font-family: $font-mono;
+    font-size: rem(18);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__total-price {
+    font-family: $font-mono;
+    font-size: rem(24);
+    font-weight: 700;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: rem(16);
+    text-align: center;
+    font-size: rem(16);
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.cart-list {
+  border-bottom: $border-width-2x solid $black;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: rem(12);
+  padding: rem(12) rem(16);
+  border-bottom: $border-width-2x solid $black;
+
+  @include screen-600 {
+    gap: rem(24);
+    padding: rem(16);
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+    min-width: 0;
+  }
+
+  &__title {
+    display: none;
+    font-size: rem(14);
+
+    @include screen-600 {
+      display: block;
+    }
+  }
+
+  &__link {
+    flex-shrink: 0;
+  }
+
+  &__img {
+    display: block;
+    width: rem(48);
+    height: rem(64);
+    object-fit: cover;
+    border: $border-width-2x solid $black;
+
+    @include screen-600 {
+      width: rem(64);
+      height: rem(80);
+    }
+  }
+
+  &__info {
+    display: none;
+
+    @include screen-600 {
+      display: flex;
+      align-items: center;
+      gap: rem(8);
+    }
+  }
+
+  &__color {
+    width: rem(20);
+    height: rem(20);
+    font-size: 0;
+  }
+
+  &__size {
+    font-family: $font-mono;
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    border: $border-width-2x solid $black;
+    padding: rem(1) rem(6);
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+}

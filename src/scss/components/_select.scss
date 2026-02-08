@@ -1,0 +1,71 @@
+@use '../partials/utils' as *;
+
+.select-block {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+
+  &__text {
+    font-family: $font-mono;
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+}
+
+.select {
+  position: relative;
+
+  &__name {
+    display: inline-block;
+    padding: rem(6) rem(14);
+    border: $border-width-2x solid $black;
+    font-family: $font-mono;
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: color $trans-sm, background-color $trans-sm;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -2px;
+    border: $border-width-2x solid $black;
+    background-color: $white;
+    z-index: 10;
+  }
+
+  &__item {
+    padding: rem(6) rem(14);
+    border-bottom: $border-width-2x solid $black;
+    font-family: $font-mono;
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    transition: color $trans-sm, background-color $trans-sm;
+    cursor: crosshair;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:hover,
+    &_active {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

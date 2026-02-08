@@ -1,0 +1,56 @@
+@use '../partials/utils' as *;
+
+.button-nav {
+  width: rem(32);
+  height: rem(32);
+  border: none;
+  background: none;
+  position: relative;
+
+  &__hamburger {
+    display: block;
+    width: rem(24);
+    height: $border-width-2x;
+    background-color: $black;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color $trans-sm;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: $border-width-2x;
+      background-color: $black;
+      position: absolute;
+      left: 0;
+      transition: transform $trans-sm;
+    }
+
+    &::before {
+      top: rem(-7);
+    }
+
+    &::after {
+      bottom: rem(-7);
+    }
+  }
+
+  &_open &__hamburger {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

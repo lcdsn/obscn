@@ -1,0 +1,35 @@
+@use '../partials/utils' as *;
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: rem(16);
+  background-color: $black;
+  color: $white;
+  border-top: $border-width-2x solid $black;
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+  }
+
+  &__text {
+    font-family: $font-mono;
+    font-size: rem(11);
+    letter-spacing: 0.05em;
+
+    &_year {
+      opacity: 0.5;
+    }
+  }
+
+  .logo__text-main {
+    color: $white;
+    font-size: rem(18);
+  }
+}

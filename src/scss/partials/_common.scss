@@ -1,0 +1,60 @@
+@use 'vars' as *;
+@use 'mixins' as *;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  border-left: $border-width-2x solid $black;
+  border-right: $border-width-2x solid $black;
+}
+
+.main {
+  flex: 1;
+}
+
+.catalog,
+.product,
+.cart,
+.not-found {
+  animation: fade-in 0.4s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo,
+.nav-list__link,
+.select__name,
+.select__item,
+.button,
+.button-tag,
+.button-square,
+.button-counter,
+.button-close,
+.catalog-item__link,
+.color:not(.color_disabled),
+.size:not(.size_disabled),
+.add,
+.cart-item__link {
+  cursor: crosshair;
+}
+
+.section-top {
+  padding: rem(16);
+  border-bottom: $border-width-2x solid $black;
+}
+
+.text {
+  font-size: rem(16);
+  line-height: 1.6;
+}

@@ -1,0 +1,55 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Brasil Halter Top",
+      "images": ["/img/1.jpeg", "/img/2.jpeg"],
+      "price": 80,
+      "sizes": ["xs", "s", "m", "l"],
+      "category": "tops",
+      "gender": "women",
+      "about": "Reworked Brasil jersey halter top. Hand-cut and reconstructed with raw edge detailing and adjustable buckle straps. Each piece is one-of-a-kind."
+    },
+    {
+      "id": 1,
+      "name": "Splatter Logo Tee",
+      "images": ["/img/4.jpeg", "/img/3.jpeg", "/img/5.jpeg"],
+      "price": 80,
+      "sizes": ["s", "m", "l", "xl"],
+      "category": "tops",
+      "gender": "men",
+      "about": "Heavyweight cotton tee with hand-applied bleach splatter effect and OBSCN calligraphy print. Back features the signature cherry bomb logo. No two are alike."
+    },
+    {
+      "id": 2,
+      "name": "Patchwork Wide Jeans",
+      "images": ["/img/7.jpeg", "/img/8.jpeg"],
+      "price": 80,
+      "sizes": ["s", "m", "l"],
+      "category": "bottoms",
+      "gender": "women",
+      "about": "Distressed wide-leg jeans with hand-sewn plaid patchwork inserts. Whiskered wash with raw hem finish. Sits low on the waist."
+    },
+    {
+      "id": 3,
+      "name": "Distressed Bermuda",
+      "images": ["/img/9.jpeg", "/img/3.jpeg"],
+      "price": 80,
+      "sizes": ["s", "m", "l", "xl"],
+      "category": "bottoms",
+      "gender": "men",
+      "about": "Overdyed bermuda shorts with heavy distressing and contrast stitch repair. Pink acid wash with black patchwork panels. Relaxed fit."
+    },
+    {
+      "id": 4,
+      "name": "OBSCN Lookbook Set",
+      "images": ["/img/10.jpeg", "/img/1.jpeg", "/img/9.jpeg"],
+      "price": 80,
+      "sizes": ["s", "m", "l"],
+      "category": "sets",
+      "gender": "sets",
+      "about": "The full OBSCN experience. Curated set from our debut collection featuring your choice of top and bottom pairing."
+    }
+  ],
+  "categories": ["tops", "bottoms", "sets"]
+}

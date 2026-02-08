@@ -1,0 +1,22 @@
+@function rem($num) {
+  $strip-unit: calc($num / ($num * 0 + 1));
+  @return calc($strip-unit / 16 * 1rem);
+}
+
+@mixin screen-600 {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin screen-1200 {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screen-1600 {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

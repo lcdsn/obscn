@@ -1,0 +1,59 @@
+@use '../partials/utils' as *;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: rem(12) rem(16);
+  background-color: $white;
+  border-top: $border-width-2x solid $black;
+  border-bottom: $border-width-2x solid $black;
+  z-index: 100;
+  gap: rem(8);
+
+  &__button-nav {
+    flex-shrink: 0;
+
+    @include screen-1200 {
+      display: none;
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+
+  > .button-square {
+    display: none;
+
+    @include screen-1200 {
+      display: inline-flex;
+    }
+  }
+}
+
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: rem(6);
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(32);
+    height: rem(32);
+    color: $black;
+    transition: opacity $trans-sm;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

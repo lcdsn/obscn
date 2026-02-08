@@ -1,0 +1,32 @@
+@use '../partials/utils' as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  padding: rem(16);
+  border-bottom: $border-width-2x solid $black;
+
+  @include screen-600 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.sidebar-left {
+  font-size: 0;
+
+  &__title {
+    margin-bottom: rem(8);
+    font-size: rem(14);
+  }
+
+  &__button-tag {
+    margin: 0 rem(6) rem(6) 0;
+  }
+}
+
+.sidebar-right {
+  flex-shrink: 0;
+}

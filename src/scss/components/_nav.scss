@@ -1,0 +1,68 @@
+@use '../partials/utils' as *;
+
+.nav {
+  display: none;
+
+  @include screen-1200 {
+    display: block;
+  }
+
+  &_open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    right: -2px;
+    background-color: $white;
+    border-bottom: $border-width-2x solid $black;
+    padding: rem(16);
+    z-index: 99;
+
+    @include screen-1200 {
+      position: static;
+      border-bottom: none;
+      padding: 0;
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+
+  @include screen-1200 {
+    flex-direction: row;
+    gap: rem(24);
+  }
+
+  &__link {
+    font-family: $font-mono;
+    font-size: rem(14);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: rem(4) 0;
+    border: none;
+    background: none;
+    color: $black;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: $border-width-2x;
+      background-color: $black;
+      transition: width $trans-sm;
+    }
+
+    &:hover::after,
+    &_active::after {
+      width: 100%;
+    }
+  }
+}

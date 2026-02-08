@@ -1,0 +1,35 @@
+@use '../partials/utils' as *;
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  color: $black;
+
+  &__text-main {
+    display: block;
+    font-family: $font-mono;
+    font-size: rem(24);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1;
+
+    @include screen-1200 {
+      font-size: rem(28);
+    }
+  }
+
+  &__text-sub {
+    display: block;
+    font-family: $font-mono;
+    font-size: rem(10);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1.2;
+
+    @include screen-1200 {
+      font-size: rem(11);
+    }
+  }
+}

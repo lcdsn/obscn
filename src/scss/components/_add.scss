@@ -1,0 +1,40 @@
+@use '../partials/utils' as *;
+
+.add {
+  display: inline-block;
+  vertical-align: top;
+  padding: rem(6) rem(14);
+  border: $border-width-2x solid $black;
+  outline: none;
+  background-color: transparent;
+  color: $black;
+  font-family: $font-mono;
+  font-size: rem(13);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+  transition: color $trans-sm;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: $black;
+    transition: height $trans-sm;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $white;
+
+    &::before {
+      height: 100%;
+    }
+  }
+}

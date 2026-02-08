@@ -1,0 +1,169 @@
+@use '../partials/utils' as *;
+
+.catalog-item {
+  padding: rem(16);
+  border-bottom: $border-width-2x solid $black;
+  border-right: none;
+
+  @include screen-600 {
+    border-right: $border-width-2x solid $black;
+
+    &:nth-child(2n) {
+      border-right: none;
+    }
+  }
+
+  @include screen-1200 {
+    &:nth-child(2n) {
+      border-right: $border-width-2x solid $black;
+    }
+
+    &:nth-child(3n) {
+      border-right: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .catalog-item__overlay {
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    font-size: 0;
+    text-decoration: none;
+  }
+
+  &__title {
+    margin: 0;
+    padding: rem(12) rem(16);
+    font-family: $font-mono;
+    font-size: rem(14);
+    line-height: 1.25;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  &__price {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: rem(12) rem(16);
+    background-color: $black;
+    color: $white;
+    font-size: rem(14);
+    z-index: 1;
+  }
+
+  &__overlay {
+    padding: rem(12) rem(16) rem(8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem(44);
+    background-color: $black;
+    transform: translateY(100%);
+    transition: transform $trans-md;
+    z-index: 3;
+
+    .color {
+      border-color: $white;
+
+      &:hover:not(.color_disabled) {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+
+      &_active {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+
+      &_black.color_active {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+
+      &_white.color_active {
+        &::before,
+        &::after {
+          background-color: $black;
+        }
+      }
+    }
+
+    .size {
+      border-color: $white;
+      color: $white;
+
+      &:hover:not(.size_disabled) {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+
+      &_active {
+        &::before,
+        &::after {
+          background-color: $white;
+        }
+      }
+    }
+
+    .colors,
+    .sizes {
+      margin-bottom: rem(8);
+    }
+  }
+
+  &__add {
+    border-color: $white;
+    color: $white;
+    float: right;
+    position: relative;
+    z-index: 4;
+
+    &::before {
+      background-color: $white;
+    }
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}

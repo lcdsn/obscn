@@ -1,0 +1,29 @@
+@use '../partials/utils' as *;
+
+.title {
+  margin: 0;
+  font-family: $font-mono;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+
+  &_large {
+    font-size: rem(40);
+  }
+
+  &_middle {
+    font-size: rem(28);
+
+    @include screen-1200 {
+      font-size: rem(32);
+    }
+  }
+
+  &_small {
+    font-size: rem(18);
+
+    @include screen-1200 {
+      font-size: rem(22);
+    }
+  }
+}

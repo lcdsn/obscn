@@ -1,0 +1,10 @@
+@use '../partials/utils' as *;
+
+.not-found {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(64) rem(16);
+  }
+}

@@ -1,0 +1,130 @@
+@use '../partials/utils' as *;
+
+.product {
+  &__section-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__container {
+    @include screen-1200 {
+      display: grid;
+      grid-template-columns: 66.6666% 33.3333%;
+    }
+  }
+}
+
+.product-left {
+  display: flex;
+  flex-direction: column;
+
+  @include screen-600 {
+    flex-direction: row;
+  }
+
+  &__picture-preview {
+    display: flex;
+    flex-direction: row;
+    gap: rem(4);
+    padding: rem(8);
+    border-bottom: $border-width-2x solid $black;
+
+    @include screen-600 {
+      flex-direction: column;
+      border-bottom: none;
+      border-right: $border-width-2x solid $black;
+      width: rem(100);
+      flex-shrink: 0;
+    }
+
+    @include screen-1200 {
+      width: rem(140);
+    }
+  }
+
+  &__picture-large {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+.picture-preview {
+  &__item {
+    flex: 1;
+    cursor: crosshair;
+    opacity: 0.5;
+    transition: opacity $trans-sm;
+    border: $border-width-2x solid transparent;
+
+    &:hover,
+    &_active {
+      opacity: 1;
+      border-color: $black;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+
+    @include screen-600 {
+      aspect-ratio: 3 / 4;
+    }
+  }
+}
+
+.picture-large {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: $white;
+
+  &__img {
+    display: block;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+  }
+}
+
+.product-right {
+  padding: rem(16);
+  border-top: $border-width-2x solid $black;
+
+  @include screen-1200 {
+    border-top: none;
+    border-left: $border-width-2x solid $black;
+    padding: rem(24);
+  }
+
+  &__text {
+    margin-bottom: rem(24);
+    font-size: rem(15);
+    line-height: 1.6;
+  }
+
+  &__colors {
+    margin-bottom: rem(16);
+  }
+
+  &__sizes {
+    margin-bottom: rem(24);
+  }
+
+  &__price {
+    margin-bottom: rem(24);
+    font-size: rem(28);
+  }
+
+  &__add {
+    width: 100%;
+    text-align: center;
+    padding: rem(12) rem(20);
+    font-size: rem(16);
+  }
+}

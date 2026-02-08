@@ -1,0 +1,42 @@
+@use '../partials/utils' as *;
+
+.button-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(32);
+  height: rem(32);
+  border: $border-width-2x solid $black;
+  background-color: transparent;
+  transition: background-color $trans-sm, color $trans-sm;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  &__symbol {
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+
+  &__value {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(32);
+    border: $border-width-2x solid $black;
+    font-family: $font-mono;
+    font-size: rem(14);
+    font-weight: 700;
+    text-align: center;
+  }
+}

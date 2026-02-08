@@ -67,7 +67,6 @@ function Cart() {
             <span className="cart__total-label">Total</span>
             <span className="cart__total-price">R$ {totalPrice}</span>
           </div>
-          <button className="button cart__button">Checkout</button>
         </>
       )}
     </section>

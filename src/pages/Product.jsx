@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { useCart } from '../context/CartContext';
+import { asset } from '../utils/asset';
 
 const SIZE_NAMES = ['xs', 's', 'm', 'l', 'xl'];
 
@@ -37,14 +38,14 @@ function Product({ id, name, images, price, sizes, about }) {
                 key={index}
                 onClick={() => setActiveImage(index)}
               >
-                <img className="picture-preview__img" src={img} alt={`${name} ${index + 1}`} />
+                <img className="picture-preview__img" src={asset(img)} alt={`${name} ${index + 1}`} />
               </li>
             ))}
           </ul>
           <div className="picture-large product-left__picture-large">
             <img
               className="picture-large__img"
-              src={images?.[activeImage]}
+              src={asset(images?.[activeImage] ?? '')}
               alt={name}
             />
           </div>

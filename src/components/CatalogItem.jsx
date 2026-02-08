@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import { useCart } from '../context/CartContext';
+import { asset } from '../utils/asset';
 
 const SIZE_NAMES = ['xs', 's', 'm', 'l', 'xl'];
 
@@ -41,7 +42,7 @@ function CatalogItem({ id, name, images, price, sizes }) {
             + add
           </button>
         </div>
-        <img className="catalog-item__img" src={images[0]} alt={name} loading="lazy" />
+        <img className="catalog-item__img" src={asset(images[0])} alt={name} loading="lazy" />
       </article>
     </li>
   );

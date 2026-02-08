@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { asset } from '../utils/asset';
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, totalPrice } = useCart();
@@ -29,7 +30,7 @@ function Cart() {
                   <Link className="cart-item__link" to={`/product/${item.id}`}>
                     <img
                       className="cart-item__img"
-                      src={item.images[0]}
+                      src={asset(item.images[0])}
                       alt={item.name}
                     />
                   </Link>
